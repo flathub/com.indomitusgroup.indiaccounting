@@ -6,7 +6,7 @@ One-time purchase, no subscription.
 
 ## Installation
 ```bash
-flatpak install flathub com.indomitusgroup.indiAccounting
+flatpak install flathub com.indomitusgroup.indiaccounting
 ```
 
 ## Features
