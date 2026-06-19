@@ -33,5 +33,5 @@ modules:
     sources:
       - type: archive
         url: https://downloads.indomitusgroup.com/indiaccounting/indiaccounting-1.0.1-linux-x86_64.tar.gz
-        sha256: 41ad7f1c2706167425d7d144af405e98a7c0625815c2b662c1b34817e7a71ff2
+        sha256: 15c00cec93a82f7472071f1669cd30c58332c866992f691c60f1886b142f35c7
 
