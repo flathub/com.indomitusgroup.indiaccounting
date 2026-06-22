@@ -32,6 +32,6 @@ modules:
       - install -Dm644 icons/512x512.png ${FLATPAK_DEST}/share/icons/hicolor/512x512/apps/com.indomitusgroup.indiaccounting.png
     sources:
       - type: archive
-        url: https://downloads.indomitusgroup.com/indiaccounting/indiaccounting-1.0.2-linux-x86_64.tar.gz
-        sha256: 6986b8d632aeac80ff5c5622a0698b2f21733a3799342022b1981be82d8251ca
+        url: https://downloads.indomitusgroup.com/indiaccounting/indiaccounting-1.0.3-linux-x86_64.tar.gz
+        sha256: 2dd2f57d01e25ad8f859e39f990ff6e0f8055c1cfe4197d28276ad0730710992
 
