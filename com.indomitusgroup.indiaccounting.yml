@@ -20,6 +20,43 @@ finish-args:
   - --share=network
 
 modules:
+  # Receipt OCR shells out to the native `tesseract` binary and its leptonica dependency.
+  - name: leptonica
+    config-opts:
+      - --disable-static
+    cleanup:
+      - /include
+      - /lib/*.a
+      - /lib/*.la
+      - /lib/pkgconfig
+    sources:
+      - type: archive
+        url: https://github.com/DanBloomberg/leptonica/releases/download/1.84.1/leptonica-1.84.1.tar.gz
+        sha256: 2b3e1254b1cca381e77c819b59ca99774ff43530209b9aeb511e1d46588a64f6
+
+  - name: tesseract
+    config-opts:
+      - --disable-static
+      - --disable-openmp
+      - --without-archive
+    cleanup:
+      - /include
+      - /lib/*.a
+      - /lib/*.la
+      - /lib/pkgconfig
+    sources:
+      - type: archive
+        url: https://github.com/tesseract-ocr/tesseract/archive/refs/tags/5.5.0.tar.gz
+        sha256: f2fb34ca035b6d087a42875a35a7a5c4155fa9979c6132365b1e5a28ebc3fc11
+      # English "fast" model (~4 MB), installed where tesseract looks by default
+      # (/app/share/tessdata). If a build ever can't find it, add
+      # `--env=TESSDATA_PREFIX=/app/share/tessdata` to finish-args.
+      - type: file
+        url: https://github.com/tesseract-ocr/tessdata_fast/raw/4.1.0/eng.traineddata
+        sha256: 7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2
+    post-install:
+      - install -Dm644 eng.traineddata /app/share/tessdata/eng.traineddata
+
   - name: indiaccounting
     buildsystem: simple
     build-commands:
@@ -32,6 +69,7 @@ modules:
       - install -Dm644 icons/512x512.png ${FLATPAK_DEST}/share/icons/hicolor/512x512/apps/com.indomitusgroup.indiaccounting.png
     sources:
       - type: archive
-        url: https://downloads.indomitusgroup.com/indiaccounting/indiaccounting-1.0.3-linux-x86_64.tar.gz
-        sha256: 2dd2f57d01e25ad8f859e39f990ff6e0f8055c1cfe4197d28276ad0730710992
+        url: https://downloads.indomitusgroup.com/indiaccounting/indiaccounting-1.0.4-linux-x86_64.tar.gz
+        # Flatpak SHA256
+        sha256: fc8a040c82195ba46f32efae770cb84bc90d905f8d8c5423d2913aab4a2820d1
 
