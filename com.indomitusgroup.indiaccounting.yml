@@ -72,5 +72,5 @@ modules:
         url: https://downloads.indomitusgroup.com/indiaccounting/indiaccounting-1.7.0-linux-x86_64.tar.gz
         # Flatpak SHA256 — TODO: replace with the real hash of the published 1.1.0
         # tarball before building (sha256sum indiaccounting-1.1.0-linux-x86_64.tar.gz).
-        sha256: 4f4482a1b65cad34c774bda41e79d7f6c2b4ed1fc55ec77b5413ed51183946c8
+        sha256: 64dc493cc5022c5968c6babc45f6629e90abafa9432cc2f5896ea98d92f9e801
 
