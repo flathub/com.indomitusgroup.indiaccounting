@@ -68,8 +68,11 @@ modules:
       - install -Dm644 icons/256x256.png ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps/com.indomitusgroup.indiaccounting.png
       - install -Dm644 icons/512x512.png ${FLATPAK_DEST}/share/icons/hicolor/512x512/apps/com.indomitusgroup.indiaccounting.png
     sources:
+      # Both lines below are written by flatpak/preparerelease.sh from the
+      # tarball it just built. Never edit the sha256 by hand, and never let a
+      # search-and-replace near this file: the 2.0.0 Flathub build failed
+      # because a replace landed on leptonica's checksum instead of this one.
       - type: archive
-        url: https://downloads.indomitusgroup.com/indiaccounting/indiaccounting-1.9.6-linux-x86_64.tar.gz
-     
-        sha256: c161978a8269a34e3093f439d4284e4ace9f0a70a9166d93147b1bcba6f84d5b
+        url: https://downloads.indomitusgroup.com/indiaccounting/indiaccounting-2.0.0-linux-x86_64.tar.gz
+        sha256: 7f5b76f865a322c06ad362ef8f1c8882de75edc35a84d5e5e1a02b972318bc4e
 
