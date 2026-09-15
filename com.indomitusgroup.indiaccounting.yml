@@ -32,7 +32,7 @@ modules:
     sources:
       - type: archive
         url: https://github.com/DanBloomberg/leptonica/releases/download/1.84.1/leptonica-1.84.1.tar.gz
-        sha256: 2b3e1254b1cca381e77c819b59ca99774ff43530209b9aeb511e1d46588a64f6
+        sha256: REPLACE_WITH_SHA256_OF_2_0_0_TARBALL
 
   - name: tesseract
     config-opts:
@@ -69,7 +69,7 @@ modules:
       - install -Dm644 icons/512x512.png ${FLATPAK_DEST}/share/icons/hicolor/512x512/apps/com.indomitusgroup.indiaccounting.png
     sources:
       - type: archive
-        url: https://downloads.indomitusgroup.com/indiaccounting/indiaccounting-1.9.6-linux-x86_64.tar.gz
+        url: https://downloads.indomitusgroup.com/indiaccounting/indiaccounting-2.0.0-linux-x86_64.tar.gz
      
-        sha256: c161978a8269a34e3093f439d4284e4ace9f0a70a9166d93147b1bcba6f84d5b
+        sha256: b55b8a560ff5d49a9cbb25053a735ca44d1d96fa661d6bc104eb3425ac2e215d
 
