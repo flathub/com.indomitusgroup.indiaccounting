@@ -73,6 +73,6 @@ modules:
       # search-and-replace near this file: the 2.0.0 Flathub build failed
       # because a replace landed on leptonica's checksum instead of this one.
       - type: archive
-        url: https://downloads.indomitusgroup.com/indiaccounting/indiaccounting-2.0.2-linux-x86_64.tar.gz
-        sha256: 622e3c8a4018f630d8fd75d645d857cdacf5a634e044b6db821614dd69ac6cd2
+        url: https://downloads.indomitusgroup.com/indiaccounting/indiaccounting-2.1.0-linux-x86_64.tar.gz
+        sha256: 4e2481e9b09d38e3e2dfabe220c408d6fc677c4df7973ecd4c34102034797b60
 
